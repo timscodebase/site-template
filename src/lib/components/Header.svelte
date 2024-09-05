@@ -1,25 +1,33 @@
 <script>
-	import { name, description } from '$lib/site-config.json';
-	import { DarkModeToggle, Meta } from '$lib';
+	import { name, description, urls } from '$lib/site-config.json'
+	import { DarkModeToggle, Meta, Nav } from '$lib'
 </script>
 
 <Meta />
 
 <header>
-	<span class="logo header-font">{name}</span>
-	<p>{description}</p>
+	<div class="logo">
+		<span class="logo-span header-font">{name}</span>
+		<p>{description}</p>
+	</div>
 	<DarkModeToggle />
-	<nav>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/contact">Contact</a></li>
-		</ul>
-	</nav>
+	<Nav {urls} />
 </header>
 
 <style>
+	header {
+		display: flex;
+		justify-content: space-between;
+		padding: 1rem;
+	}
+
 	.logo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.logo-span {
 		font-size: 2.5rem;
 	}
 </style>

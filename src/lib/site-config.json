@@ -17,5 +17,10 @@
     "color-error-light": "#8C2800",
     "color-warning-dark": "#C4BD00",
     "color-warning-light": "#8A8600"
-  }
+  },
+  "urls": [
+    {"url": "/", "text": "Home"},
+    {"url": "/about", "text": "About"},
+    {"url": "/contact", "text": "Contact"}
+  ]
 }
