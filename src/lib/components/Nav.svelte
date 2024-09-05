@@ -4,8 +4,8 @@
 
 <nav>
 	<ul>
-		{#each links as link}
-			<li><a href={link.url}>{link.text}</a></li>
+		{#each links.links as { url, text }}
+			<li><a href={url}>{text}</a></li>
 		{/each}
 	</ul>
 </nav>

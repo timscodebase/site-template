@@ -3,8 +3,6 @@
 	import { DarkModeToggle, Meta, Nav } from '$lib'
 
 	const links = config.nav_links
-
-	$inspect(links)
 </script>
 
 <Meta />
