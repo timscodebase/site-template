@@ -1,5 +1,7 @@
 import { dev } from '$app/environment'
 
+export const url = dev ? 'http://localhost:5173/' : 'https://joyofcode.xyz/'
+
 export const name = "Site Name";
 export const description = "Site Description";
 export const author = "Tim Smith <gonad2019@gmail.com";
@@ -20,7 +22,7 @@ export const colors = {
     "color-toggle-dark": "#F2E6DF",
     "color-toggle-light": "#070F26"
 };
-export const urls = [
+export const nav_links = [
   {"url": "/", "text": "Home"},
   {"url": "/about", "text": "About"},
   {"url": "/contact", "text": "Contact"},

@@ -1,6 +1,5 @@
 <script>
-	let urls = $props()
-	let links = urls.urls
+	let links = $props()
 </script>
 
 <nav>

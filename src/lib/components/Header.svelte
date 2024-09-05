@@ -1,16 +1,20 @@
 <script>
-	import { name, description, urls } from '$lib/config'
+	import * as config from '$lib/config'
 	import { DarkModeToggle, Meta, Nav } from '$lib'
+
+	const links = config.nav_links
+
+	$inspect(links)
 </script>
 
 <Meta />
 
 <header>
 	<div class="logo">
-		<span class="logo-span header-font">{name}</span>
-		<p>{description}</p>
+		<span class="logo-span header-font">{config.name}</span>
+		<p>{config.description}</p>
 	</div>
-	<Nav {urls} />
+	<Nav {links} />
 	<DarkModeToggle />
 </header>
 
