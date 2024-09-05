@@ -1,30 +1,33 @@
 <script>
-	let isDarkMode = $state(true);
+	import 'iconify-icon'
+	let isDarkMode = $state(true)
 
 	$effect(() => {
-		const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-		const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+		const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')
+		const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null
 
 		if (currentTheme) {
-			document.documentElement.setAttribute('data-theme', currentTheme);
+			document.documentElement.setAttribute('data-theme', currentTheme)
 
 			if (currentTheme === 'dark') {
-				toggleSwitch.checked = true;
+				toggleSwitch.checked = true
 			}
 		}
 
 		function switchTheme(e) {
 			if (e.target.checked) {
-				document.documentElement.setAttribute('data-theme', 'dark');
-				localStorage.setItem('theme', 'dark'); //add this
+				document.documentElement.setAttribute('data-theme', 'dark')
+				localStorage.setItem('theme', 'dark')
+				isDarkMode = true
 			} else {
-				document.documentElement.setAttribute('data-theme', 'light');
-				localStorage.setItem('theme', 'light'); //add this
+				document.documentElement.setAttribute('data-theme', 'light')
+				localStorage.setItem('theme', 'light')
+				isDarkMode = false
 			}
 		}
 
-		toggleSwitch.addEventListener('change', switchTheme, false);
-	});
+		toggleSwitch?.addEventListener('change', switchTheme, false)
+	})
 </script>
 
 <div class="theme-switch-wrapper">
@@ -32,24 +35,36 @@
 		<input type="checkbox" id="checkbox" />
 		<div class="slider round"></div>
 	</label>
-	<em>Enable Dark Mode!</em>
+	{#if isDarkMode}
+		<em><iconify-icon icon="fe:sunny-o"></iconify-icon></em>
+	{:else}
+		<em><iconify-icon icon="fe:moon"></iconify-icon></em>
+	{/if}
 </div>
 
 <style>
 	.theme-switch-wrapper {
-		display: flex;
-		align-items: center;
+		display: grid;
+		place-items: center;
+		justify-content: center;
+		grid-template-columns: auto 1fr;
+		height: 24px;
 
 		em {
+			display: grid;
+			place-items: center;
+			justify-content: center;
 			margin-left: 10px;
-			font-size: 1rem;
+			font-size: 1.5rem;
+			color: var(--color-accent);
+			font-weight: 600;
 		}
 	}
 	.theme-switch {
 		display: inline-block;
-		height: 34px;
+		height: 24px;
 		position: relative;
-		width: 60px;
+		width: 40px;
 	}
 
 	.theme-switch input {
@@ -57,7 +72,7 @@
 	}
 
 	.slider {
-		background-color: #ccc;
+		background-color: var(--color-toggle-light);
 		bottom: 0;
 		cursor: pointer;
 		left: 0;
@@ -68,22 +83,27 @@
 	}
 
 	.slider:before {
-		background-color: #fff;
-		bottom: 4px;
-		content: '';
-		height: 26px;
-		left: 4px;
+		--offset: 2px;
+		--size: 20px;
+
 		position: absolute;
+		left: var(--offset);
+		bottom: var(--offset);
+
+		content: '';
 		transition: 0.4s;
-		width: 26px;
+		width: var(--size);
+		height: var(--size);
+		font-size: calc(var(--size) / 2);
+		background-color: var(--color-accent);
 	}
 
 	input:checked + .slider {
-		background-color: #66bb6a;
+		background-color: var(--color-toggle);
 	}
 
 	input:checked + .slider:before {
-		transform: translateX(26px);
+		transform: translateX(16px);
 	}
 
 	.slider.round {

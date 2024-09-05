@@ -22,14 +22,19 @@ a {
   --color-success: var(--color-success-light);
   --color-error: var(--color-error-light);
   --color-warning: var(--color-warning-light);
+  --color-toggle: var(--color-toggle-light);
+
+  --text-toggle: "🌙"
 }
 
 [data-theme='dark'] {
-
   --color-surface: var(--color-surface-dark);
   --color-text: var(--color-text-dark);
   --color-accent: var(--color-accent-dark);
   --color-success: var(--color-success-dark);
   --color-error: var(--color-error-dark);
   --color-warning: var(--color-warning-dark);
+  --color-toggle: var(--color-toggle-dark);
+
+  --text-toggle: "☀️"
 }

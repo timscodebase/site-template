@@ -10,14 +10,15 @@
 		<span class="logo-span header-font">{name}</span>
 		<p>{description}</p>
 	</div>
-	<DarkModeToggle />
 	<Nav {urls} />
+	<DarkModeToggle />
 </header>
 
 <style>
 	header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		padding: 1rem;
 	}
 

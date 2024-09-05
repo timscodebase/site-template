@@ -16,11 +16,14 @@
     "color-error-dark": "#E24000",
     "color-error-light": "#8C2800",
     "color-warning-dark": "#C4BD00",
-    "color-warning-light": "#8A8600"
+    "color-warning-light": "#8A8600",
+    "color-toggle-dark": "#F2E6DF",
+    "color-toggle-light": "#070F26"
   },
   "urls": [
     {"url": "/", "text": "Home"},
     {"url": "/about", "text": "About"},
-    {"url": "/contact", "text": "Contact"}
+    {"url": "/contact", "text": "Contact"},
+    {"url": "/blog", "text": "Blog"}
   ]
 }
