@@ -1,5 +1,5 @@
 <script>
-	import { author, name, description, keywords } from '$lib/site-config.json';
+	import { author, name, description, keywords } from '$lib/config'
 </script>
 
 <svelte:head>

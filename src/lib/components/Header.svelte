@@ -1,5 +1,5 @@
 <script>
-	import { name, description, urls } from '$lib/site-config.json'
+	import { name, description, urls } from '$lib/config'
 	import { DarkModeToggle, Meta, Nav } from '$lib'
 </script>
 

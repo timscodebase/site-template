@@ -1,5 +1,5 @@
 <script>
-	import { name, description } from '$lib/site-config.json';
+	import { name, description } from '$lib/config'
 </script>
 
 <footer>
