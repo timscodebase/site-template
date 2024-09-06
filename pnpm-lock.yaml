@@ -10,17 +10,20 @@ importers:
     dependencies:
       '@sveltejs/adapter-vercel':
         specifier: ^5.4.3
-        version: 5.4.3(@sveltejs/kit@2.5.25(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))
+        version: 5.4.3(@sveltejs/kit@2.5.26(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))
       iconify-icon:
         specifier: ^2.1.0
         version: 2.1.0
+      shiki:
+        specifier: ^1.16.2
+        version: 1.16.2
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^3.2.4
-        version: 3.2.4(@sveltejs/kit@2.5.25(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))
+        version: 3.2.4(@sveltejs/kit@2.5.26(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))
       '@sveltejs/kit':
-        specifier: ^2.5.25
-        version: 2.5.25(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11))
+        specifier: ^2.5.26
+        version: 2.5.26(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11))
       '@sveltejs/vite-plugin-svelte':
         specifier: 4.0.0-next.6
         version: 4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11))
@@ -53,7 +56,7 @@ importers:
         version: 5.0.0-next.243
       svelte-check:
         specifier: ^3.8.6
-        version: 3.8.6(postcss-load-config@3.1.4(postcss@8.4.44)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4)))(postcss@8.4.44)(svelte@5.0.0-next.243)
+        version: 3.8.6(postcss-load-config@3.1.4(postcss@8.4.45)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4)))(postcss@8.4.45)(svelte@5.0.0-next.243)
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
@@ -61,8 +64,8 @@ importers:
         specifier: ^8.4.0
         version: 8.4.0(eslint@9.9.1)(typescript@5.5.4)
       vercel:
-        specifier: ^37.3.0
-        version: 37.3.0
+        specifier: ^37.4.0
+        version: 37.4.0
       vite:
         specifier: ^5.4.3
         version: 5.4.3(@types/node@16.18.11)
@@ -403,6 +406,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@shikijs/core@1.16.2':
+    resolution: {integrity: sha512-XSVH5OZCvE4WLMgdoBqfPMYmGHGmCC3OgZhw0S7KcSi2XKZ+5oHGe71GFnTljgdOxvxx5WrRks6QoTLKrl1eAA==}
+
+  '@shikijs/vscode-textmate@9.2.0':
+    resolution: {integrity: sha512-5FinaOp6Vdh/dl4/yaOTh0ZeKch+rYS8DUb38V3GMKYVkdqzxw53lViRKUYkVILRiVQT7dcPC7VvAKOR73zVtQ==}
+
   '@sinclair/typebox@0.25.24':
     resolution: {integrity: sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==}
 
@@ -416,8 +425,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
-  '@sveltejs/kit@2.5.25':
-    resolution: {integrity: sha512-5hBSEN8XEjDZ5+2bHkFh8Z0QyOk0C187cyb12aANe1c8aeKbfu5ZD5XaC2vEH4h0alJFDXPdUkXQBmeeXeMr1A==}
+  '@sveltejs/kit@2.5.26':
+    resolution: {integrity: sha512-8l1JTIM2L+bS8ebq1E+nGjv/YSKSnD9Q19bYIUkc41vaEG2JjVUx6ikvPIJv2hkQAuqJLzoPrXlKk4KcyWOv3Q==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -467,6 +476,9 @@ packages:
 
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
+
+  '@types/hast@3.0.4':
+    resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -537,8 +549,8 @@ packages:
     resolution: {integrity: sha512-zTQD6WLNTre1hj5wp09nBIDiOc2U5r/qmzo7wxPn4ZgAjHql09EofqhF9WF+fZHzL5aCyaIpPcT2hyxl73kr9A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@vercel/build-utils@8.3.9':
-    resolution: {integrity: sha512-QqJSv4zHnipCJz0MFOFfe2Na630njfj1FWjcD1uaVjjJP1AcKmMbfYl/e0JfOZy6MTE6f0Vk2+Bc4av6jrTaOQ==}
+  '@vercel/build-utils@8.4.0':
+    resolution: {integrity: sha512-SB2NFwWPTFAd/3lFR0TaJ94qwHJJmpKc5ngxL05YDe+5iOdduAkl8q8kEPdHc4/wKKqrqjSk1fiCp/MQgEuL7A==}
 
   '@vercel/error-utils@2.0.2':
     resolution: {integrity: sha512-Sj0LFafGpYr6pfCqrQ82X6ukRl5qpmVrHM/191kNYFqkkB9YkjlMAj6QcEsvCG259x4QZ7Tya++0AB85NDPbKQ==}
@@ -550,8 +562,8 @@ packages:
   '@vercel/gatsby-plugin-vercel-analytics@1.0.11':
     resolution: {integrity: sha512-iTEA0vY6RBPuEzkwUTVzSHDATo1aF6bdLLspI68mQ/BTbi5UQEGjpjyzdKOVcSYApDtFU6M6vypZ1t4vIEnHvw==}
 
-  '@vercel/gatsby-plugin-vercel-builder@2.0.43':
-    resolution: {integrity: sha512-RyhnwHJO4wbciWtKVE//HGK5ZMkByjFbcSrJWOQ6+zrIcl0rXyhyQFCcNLVmg1QvCPyGwA5p1SVZ4Q+CPLLC0w==}
+  '@vercel/gatsby-plugin-vercel-builder@2.0.44':
+    resolution: {integrity: sha512-VvIfzwnpQdBKuXcUtRIL10P/aaD3eoDqk9zRsjng4IVaNcAXkTwsgobp5Eom7XgaDCa/K1tMdIPQIw+kb10ZkQ==}
 
   '@vercel/go@3.1.2':
     resolution: {integrity: sha512-VqhpNPI7ZUWPq1IQ28bpF0F81sH2JXvrmj7z/XJGN7qFXBMAmlnJzusM4B2IKacCbQlvGmyaQIV2zRXw+tFzDQ==}
@@ -559,8 +571,8 @@ packages:
   '@vercel/hydrogen@1.0.4':
     resolution: {integrity: sha512-Sc0lpmI/J6O3o2cL75k8klL7ir2gi6kYI92O5+MrR3hh4fwz/atUIL9UWsTGuFjKTm69VAoJrmn3VKf0/0SGLw==}
 
-  '@vercel/next@4.3.7':
-    resolution: {integrity: sha512-3VRPicjGJxPCRwO9oScn9cpCkzRWcZRZRsmvgDPgWihvOhpKYfPQpkE73l6o+ypC4ONsuy/IBC3STov28vqOAQ==}
+  '@vercel/next@4.3.8':
+    resolution: {integrity: sha512-ZexIiKKKSbYsZRsJCnkGVhbgW8pKUoboXSrcOfJSDIaInYPZCTzJLIa6kS+YzYgSO0r6sZBAFOkszYMQCHBSzQ==}
 
   '@vercel/nft@0.27.3':
     resolution: {integrity: sha512-oySTdDSzUAFDXpsSLk9Q943o+/Yu/+TCFxnehpFQEf/3khi2stMpTHPVNwFdvZq/Z4Ky93lE+MGHpXCRpMkSCA==}
@@ -572,8 +584,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  '@vercel/node@3.2.11':
-    resolution: {integrity: sha512-mPXz4274IZWr4ARwQKfuuvY2rcB89dG9RAJSbvTmcYmLzZzzj9FfxQj9GbJHoNt+xW3Mm6H5PLGM2R/9nWqaKw==}
+  '@vercel/node@3.2.12':
+    resolution: {integrity: sha512-FlElxNA4L5Og0tCLwYGkp3qkoscOuy5Gk7MSomPgu/ECcSBnaUnZPTPT5I4kOWXKR0L7amKswOm9z1nx1zHb7g==}
 
   '@vercel/python@4.3.1':
     resolution: {integrity: sha512-pWRApBwUsAQJS8oZ7eKMiaBGbYJO71qw2CZqDFvkTj34FNBZtNIUcWSmqGfJJY5m2pU/9wt8z1CnKIyT9dstog==}
@@ -590,8 +602,8 @@ packages:
   '@vercel/ruby@2.1.0':
     resolution: {integrity: sha512-UZYwlSEEfVnfzTmgkD+kxex9/gkZGt7unOWNyWFN7V/ZnZSsGBUgv6hXLnwejdRi3EztgRQEBd1kUKlXdIeC0Q==}
 
-  '@vercel/static-build@2.5.21':
-    resolution: {integrity: sha512-G/iDwWFw4+8SdM1RBlG2m6ghjiELCQo11GOg/hAAUu9i10F678/y6xSvzZbM93Eu9tyPqvFh3XsGPPR6Ebbv2w==}
+  '@vercel/static-build@2.5.22':
+    resolution: {integrity: sha512-hpXZgur45FuO4DUTRd9Vlh7dBkxoAGQ3tZ+Uv8kolaacnoo7U/GXd/sCiR8vHNQaXb6T4xf5lZRGH++n07NrdQ==}
 
   '@vercel/static-config@3.0.0':
     resolution: {integrity: sha512-2qtvcBJ1bGY0dYGYh3iM7yGKkk971FujLEDXzuW5wcZsPr1GSEjO/w2iSr3qve6nDDtBImsGoDEnus5FI4+fIw==}
@@ -1690,8 +1702,8 @@ packages:
     resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
     engines: {node: '>=4'}
 
-  postcss@8.4.44:
-    resolution: {integrity: sha512-Aweb9unOEpQ3ezu4Q00DPvvM2ZTUitJdNKeP/+uQgr1IBIqu574IaZoURId7BKtWMREwzKa9OgzPzezWGPWFQw==}
+  postcss@8.4.45:
+    resolution: {integrity: sha512-7KTLTdzdZZYscUc65XmjFiB73vBhBfbPztCYdUNvlaso9PrzjzcmjqBPR0lNGkcVlcO4BjiO5rK/qNz+XAen1Q==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -1826,6 +1838,9 @@ packages:
   shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+
+  shiki@1.16.2:
+    resolution: {integrity: sha512-gSym0hZf5a1U0iDPsdoOAZbvoi+e0c6c3NKAi03FoSLTm7oG20tum29+gk0wzzivOasn3loxfGUPT+jZXIUbWg==}
 
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
@@ -2096,8 +2111,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@37.3.0:
-    resolution: {integrity: sha512-J0mTHQCXxg2g5TlbO7E37s3URsQMN1AwMyH+NU+Gwyr4uMt7PS4GCAuWet5lNd4+oPN1DbY2kUbBrRMHIki01A==}
+  vercel@37.4.0:
+    resolution: {integrity: sha512-v7NCmCW1ISjvJy5h2WqmV2GH7Md1c/OYuikWVLnCyqv+6tiVl6ef5v02bsk5HKGBZh70beArxRB3r4sTBD3gBQ==}
     engines: {node: '>= 16'}
     hasBin: true
 
@@ -2479,23 +2494,30 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.21.2':
     optional: true
 
+  '@shikijs/core@1.16.2':
+    dependencies:
+      '@shikijs/vscode-textmate': 9.2.0
+      '@types/hast': 3.0.4
+
+  '@shikijs/vscode-textmate@9.2.0': {}
+
   '@sinclair/typebox@0.25.24': {}
 
-  '@sveltejs/adapter-auto@3.2.4(@sveltejs/kit@2.5.25(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))':
+  '@sveltejs/adapter-auto@3.2.4(@sveltejs/kit@2.5.26(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))':
     dependencies:
-      '@sveltejs/kit': 2.5.25(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11))
+      '@sveltejs/kit': 2.5.26(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11))
       import-meta-resolve: 4.1.0
 
-  '@sveltejs/adapter-vercel@5.4.3(@sveltejs/kit@2.5.25(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))':
+  '@sveltejs/adapter-vercel@5.4.3(@sveltejs/kit@2.5.26(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))':
     dependencies:
-      '@sveltejs/kit': 2.5.25(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11))
+      '@sveltejs/kit': 2.5.26(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11))
       '@vercel/nft': 0.27.4
       esbuild: 0.21.5
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  '@sveltejs/kit@2.5.25(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11))':
+  '@sveltejs/kit@2.5.26(@sveltejs/vite-plugin-svelte@4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11)))(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 4.0.0-next.6(svelte@5.0.0-next.243)(vite@5.4.3(@types/node@16.18.11))
       '@types/cookie': 0.6.0
@@ -2560,6 +2582,10 @@ snapshots:
       '@types/json-schema': 7.0.15
 
   '@types/estree@1.0.5': {}
+
+  '@types/hast@3.0.4':
+    dependencies:
+      '@types/unist': 2.0.11
 
   '@types/json-schema@7.0.15': {}
 
@@ -2650,7 +2676,7 @@ snapshots:
       '@typescript-eslint/types': 8.4.0
       eslint-visitor-keys: 3.4.3
 
-  '@vercel/build-utils@8.3.9': {}
+  '@vercel/build-utils@8.4.0': {}
 
   '@vercel/error-utils@2.0.2': {}
 
@@ -2684,10 +2710,10 @@ snapshots:
     dependencies:
       web-vitals: 0.2.4
 
-  '@vercel/gatsby-plugin-vercel-builder@2.0.43':
+  '@vercel/gatsby-plugin-vercel-builder@2.0.44':
     dependencies:
       '@sinclair/typebox': 0.25.24
-      '@vercel/build-utils': 8.3.9
+      '@vercel/build-utils': 8.4.0
       '@vercel/routing-utils': 3.1.0
       esbuild: 0.14.47
       etag: 1.8.1
@@ -2700,7 +2726,7 @@ snapshots:
       '@vercel/static-config': 3.0.0
       ts-morph: 12.0.0
 
-  '@vercel/next@4.3.7':
+  '@vercel/next@4.3.8':
     dependencies:
       '@vercel/nft': 0.27.3
     transitivePeerDependencies:
@@ -2743,13 +2769,13 @@ snapshots:
       - encoding
       - supports-color
 
-  '@vercel/node@3.2.11':
+  '@vercel/node@3.2.12':
     dependencies:
       '@edge-runtime/node-utils': 2.3.0
       '@edge-runtime/primitives': 4.1.0
       '@edge-runtime/vm': 3.2.0
       '@types/node': 16.18.11
-      '@vercel/build-utils': 8.3.9
+      '@vercel/build-utils': 8.4.0
       '@vercel/error-utils': 2.0.2
       '@vercel/nft': 0.27.3
       '@vercel/static-config': 3.0.0
@@ -2802,10 +2828,10 @@ snapshots:
 
   '@vercel/ruby@2.1.0': {}
 
-  '@vercel/static-build@2.5.21':
+  '@vercel/static-build@2.5.22':
     dependencies:
       '@vercel/gatsby-plugin-vercel-analytics': 1.0.11
-      '@vercel/gatsby-plugin-vercel-builder': 2.0.43
+      '@vercel/gatsby-plugin-vercel-builder': 2.0.44
       '@vercel/static-config': 3.0.0
       ts-morph: 12.0.0
 
@@ -3038,7 +3064,7 @@ snapshots:
 
   debug@4.1.1:
     dependencies:
-      ms: 2.1.2
+      ms: 2.1.1
 
   debug@4.3.6:
     dependencies:
@@ -3218,9 +3244,9 @@ snapshots:
       eslint-compat-utils: 0.5.1(eslint@9.9.1)
       esutils: 2.0.3
       known-css-properties: 0.34.0
-      postcss: 8.4.44
-      postcss-load-config: 3.1.4(postcss@8.4.44)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4))
-      postcss-safe-parser: 6.0.0(postcss@8.4.44)
+      postcss: 8.4.45
+      postcss-load-config: 3.1.4(postcss@8.4.45)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4))
+      postcss-safe-parser: 6.0.0(postcss@8.4.45)
       postcss-selector-parser: 6.1.2
       semver: 7.6.3
       svelte-eslint-parser: 0.41.0(svelte@5.0.0-next.243)
@@ -3815,28 +3841,28 @@ snapshots:
 
   picomatch@2.3.1: {}
 
-  postcss-load-config@3.1.4(postcss@8.4.44)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4)):
+  postcss-load-config@3.1.4(postcss@8.4.45)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4)):
     dependencies:
       lilconfig: 2.1.0
       yaml: 1.10.2
     optionalDependencies:
-      postcss: 8.4.44
+      postcss: 8.4.45
       ts-node: 10.9.1(@types/node@16.18.11)(typescript@5.5.4)
 
-  postcss-safe-parser@6.0.0(postcss@8.4.44):
+  postcss-safe-parser@6.0.0(postcss@8.4.45):
     dependencies:
-      postcss: 8.4.44
+      postcss: 8.4.45
 
-  postcss-scss@4.0.9(postcss@8.4.44):
+  postcss-scss@4.0.9(postcss@8.4.45):
     dependencies:
-      postcss: 8.4.44
+      postcss: 8.4.45
 
   postcss-selector-parser@6.1.2:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss@8.4.44:
+  postcss@8.4.45:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.1.0
@@ -3968,6 +3994,12 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
+  shiki@1.16.2:
+    dependencies:
+      '@shikijs/core': 1.16.2
+      '@shikijs/vscode-textmate': 9.2.0
+      '@types/hast': 3.0.4
+
   siginfo@2.0.0: {}
 
   signal-exit@3.0.7: {}
@@ -4037,14 +4069,14 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  svelte-check@3.8.6(postcss-load-config@3.1.4(postcss@8.4.44)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4)))(postcss@8.4.44)(svelte@5.0.0-next.243):
+  svelte-check@3.8.6(postcss-load-config@3.1.4(postcss@8.4.45)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4)))(postcss@8.4.45)(svelte@5.0.0-next.243):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       chokidar: 3.6.0
       picocolors: 1.1.0
       sade: 1.8.1
       svelte: 5.0.0-next.243
-      svelte-preprocess: 5.1.4(postcss-load-config@3.1.4(postcss@8.4.44)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4)))(postcss@8.4.44)(svelte@5.0.0-next.243)(typescript@5.5.4)
+      svelte-preprocess: 5.1.4(postcss-load-config@3.1.4(postcss@8.4.45)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4)))(postcss@8.4.45)(svelte@5.0.0-next.243)(typescript@5.5.4)
       typescript: 5.5.4
     transitivePeerDependencies:
       - '@babel/core'
@@ -4062,12 +4094,12 @@ snapshots:
       eslint-scope: 7.2.2
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
-      postcss: 8.4.44
-      postcss-scss: 4.0.9(postcss@8.4.44)
+      postcss: 8.4.45
+      postcss-scss: 4.0.9(postcss@8.4.45)
     optionalDependencies:
       svelte: 5.0.0-next.243
 
-  svelte-preprocess@5.1.4(postcss-load-config@3.1.4(postcss@8.4.44)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4)))(postcss@8.4.44)(svelte@5.0.0-next.243)(typescript@5.5.4):
+  svelte-preprocess@5.1.4(postcss-load-config@3.1.4(postcss@8.4.45)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4)))(postcss@8.4.45)(svelte@5.0.0-next.243)(typescript@5.5.4):
     dependencies:
       '@types/pug': 2.0.10
       detect-indent: 6.1.0
@@ -4076,8 +4108,8 @@ snapshots:
       strip-indent: 3.0.0
       svelte: 5.0.0-next.243
     optionalDependencies:
-      postcss: 8.4.44
-      postcss-load-config: 3.1.4(postcss@8.4.44)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4))
+      postcss: 8.4.45
+      postcss-load-config: 3.1.4(postcss@8.4.45)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.5.4))
       typescript: 5.5.4
 
   svelte@5.0.0-next.243:
@@ -4239,19 +4271,19 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@37.3.0:
+  vercel@37.4.0:
     dependencies:
-      '@vercel/build-utils': 8.3.9
+      '@vercel/build-utils': 8.4.0
       '@vercel/fun': 1.1.0
       '@vercel/go': 3.1.2
       '@vercel/hydrogen': 1.0.4
-      '@vercel/next': 4.3.7
-      '@vercel/node': 3.2.11
+      '@vercel/next': 4.3.8
+      '@vercel/node': 3.2.12
       '@vercel/python': 4.3.1
       '@vercel/redwood': 2.1.3
       '@vercel/remix-builder': 2.2.6
       '@vercel/ruby': 2.1.0
-      '@vercel/static-build': 2.5.21
+      '@vercel/static-build': 2.5.22
       chokidar: 3.3.1
     transitivePeerDependencies:
       - '@swc/core'
@@ -4285,7 +4317,7 @@ snapshots:
   vite@5.4.3(@types/node@16.18.11):
     dependencies:
       esbuild: 0.21.5
-      postcss: 8.4.44
+      postcss: 8.4.45
       rollup: 4.21.2
     optionalDependencies:
       '@types/node': 16.18.11
