@@ -14,7 +14,7 @@
 <article>
 	<!-- Title -->
 	<hgroup>
-		<h1>{data.meta.title}</h1>
+		<h1 style={`--transition-name: post-${post.slug}`}>{data.meta.title}</h1>
 		<p>Published at {formatDate(data.meta.date)}</p>
 	</hgroup>
 

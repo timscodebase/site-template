@@ -14,7 +14,7 @@
 <section>
 	<ul class="posts">
 		{#each posts as post}
-			<li class="post">
+			<li class="post" style={`--transition-name: post-${post.slug}`}>
 				<a href={`blog/${post.slug}`} class="title">{post.title}</a>
 				<p class="date">{formatDate(post.date)}</p>
 				<p class="description">{post.description}</p>
