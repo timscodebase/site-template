@@ -23,7 +23,7 @@
 		align-items: center;
 	}
 
-	@media (max-width: 650px) {
+	@media (max-width: 1000px) {
 		header {
 			flex-direction: column;
 		}
@@ -39,7 +39,7 @@
 		}
 	}
 
-	@media (max-width: 650px) {
+	@media (max-width: 1000px) {
 		.logo {
 			align-items: center;
 
