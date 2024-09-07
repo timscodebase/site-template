@@ -8,10 +8,12 @@
 <Meta />
 
 <header>
-	<div class="logo">
-		<span class="logo-span header-font">{config.name}</span>
-		<p>{config.description}</p>
-	</div>
+	<a href="/">
+		<div class="logo">
+			<span class="logo-span header-font">{config.name}</span>
+			<p>{config.description}</p>
+		</div>
+	</a>
 	<Nav {links} />
 	<DarkModeToggle />
 </header>
@@ -21,6 +23,16 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		border-bottom: 3px solid var(--color-accent);
+		margin-bottom: 2rem;
+		padding-bottom: 1rem;
+
+		margin-bottom: 1rem;
+
+		a {
+			text-decoration: none;
+			color: var(--text);
+		}
 	}
 
 	@media (max-width: 1000px) {

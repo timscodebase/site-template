@@ -44,7 +44,8 @@
 
 	h1 + p {
 		margin-top: var(--size-2);
-		color: var(--text-2);
+		color: var(--text);
+		opacity: 0.7;
 	}
 
 	.tags {
