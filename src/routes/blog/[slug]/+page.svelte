@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { formatDate, slugify } from '$lib/utils'
+	import * as config from '$lib/config'
 
 	export let data
 </script>
 
 <!-- SEO -->
 <svelte:head>
-	<title>{data.meta.title}</title>
+	<title>{config.name} | {data.meta.title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>

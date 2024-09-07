@@ -13,8 +13,17 @@
 	})
 </script>
 
-<Header />
-<main>
-	{@render children()}
-</main>
-<Footer />
+<div class="wrapper">
+	<Header />
+	<main>
+		{@render children()}
+	</main>
+	<Footer />
+</div>
+
+<style>
+	.wrapper {
+		max-width: 1000px;
+		margin-inline: auto;
+	}
+</style>

@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>{config.name}</title>
+	<title>{config.name} | Blog</title>
 </svelte:head>
 
 <!-- Posts -->

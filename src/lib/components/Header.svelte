@@ -21,13 +21,22 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1rem;
+	}
+
+	@media (max-width: 650px) {
+		header {
+			flex-direction: column;
+		}
 	}
 
 	.logo {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+
+		p {
+			margin: 0;
+			margin-top: -8px;
+		}
 	}
 
 	.logo-span {

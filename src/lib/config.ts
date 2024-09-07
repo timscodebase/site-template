@@ -1,6 +1,6 @@
 import { dev } from '$app/environment'
 
-export const url = dev ? 'http://localhost:5173/' : 'https://joyofcode.xyz/'
+export const url = dev ? 'http://localhost:5713' : 'site-template-gamma.vercel.app'
 
 export const name = "Site Name";
 export const description = "Site Description";
