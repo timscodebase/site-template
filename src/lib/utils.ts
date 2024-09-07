@@ -6,3 +6,15 @@ export function formatDate(date: string, dateStyle: DateStyle = 'medium', locale
 	const dateFormatter = new Intl.DateTimeFormat(locales, { dateStyle })
 	return dateFormatter.format(dateToFormat)
 }
+
+export function slugify(text: string) {
+	return text
+		.toString()
+		.trim()
+		.toLowerCase()
+		.replace(/\s+/g, '-')
+		.replace(/[^\w-]+/g, '')
+		.replace(/--+/g, '-')
+		.replace(/^-+/, '')
+		.replace(/-+$/, '')
+}

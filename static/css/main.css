@@ -16,6 +16,7 @@ a {
 }
 
 :root {
+  view-transition-name: root;
   --color-surface: var(--color-surface-light);
   --color-text: var(--color-text-light);
   --color-accent: var(--color-accent-light);
@@ -25,6 +26,40 @@ a {
   --color-toggle: var(--color-toggle-light);
 
   --text-toggle: "🌙"
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+@keyframes move-out {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes move-in {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* Apply the custom animation to the old and new page states */
+
+::view-transition-old(root) {
+  animation: 0.2s ease-in both move-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.2s ease-in both move-in;
 }
 
 [data-theme='dark'] {
@@ -37,4 +72,9 @@ a {
   --color-toggle: var(--color-toggle-dark);
 
   --text-toggle: "☀️"
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils'
+	import { formatDate, slugify } from '$lib/utils'
 
 	export let data
 </script>
@@ -14,7 +14,7 @@
 <article>
 	<!-- Title -->
 	<hgroup>
-		<h1 style={`--transition-name: post-${post.slug}`}>{data.meta.title}</h1>
+		<h1 style={`--transition-name: post-${slugify(data.meta.title)}`}>{data.meta.title}</h1>
 		<p>Published at {formatDate(data.meta.date)}</p>
 	</hgroup>
 

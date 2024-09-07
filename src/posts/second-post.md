@@ -12,4 +12,4 @@ published: true
 
 Media inside the **static** folder is served from `/`.
 
-![Svelte](favicon.png)
+![Tim Smith](https://res.cloudinary.com/tithos/image/upload/f_auto,q_auto/v1704303304/design-tim-genearal-banner_h9oma6.png)
