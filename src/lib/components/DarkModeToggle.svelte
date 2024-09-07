@@ -1,20 +1,23 @@
-<script>
-	import 'iconify-icon'
+<script lang="ts">
 	let isDarkMode = $state(true)
 
 	$effect(() => {
-		const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')
+		const toggleSwitch = document.querySelector(
+			'.theme-switch input[type="checkbox"]'
+		) as HTMLInputElement
 		const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null
 
 		if (currentTheme) {
 			document.documentElement.setAttribute('data-theme', currentTheme)
 
 			if (currentTheme === 'dark') {
-				toggleSwitch.checked = true
+				if (toggleSwitch) {
+					toggleSwitch.checked = true
+				}
 			}
 		}
 
-		function switchTheme(e) {
+		function switchTheme(e: any) {
 			if (e.target.checked) {
 				document.documentElement.setAttribute('data-theme', 'dark')
 				localStorage.setItem('theme', 'dark')

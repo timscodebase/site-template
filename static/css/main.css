@@ -1,85 +1,85 @@
 @import url('./typograpy.css');
 
 :root {
-  view-transition-name: root;
-  --color-surface: var(--color-surface-light);
-  --color-text: var(--color-text-light);
-  --color-accent: var(--color-accent-light);
-  --color-success: var(--color-success-light);
-  --color-error: var(--color-error-light);
-  --color-warning: var(--color-warning-light);
-  --color-toggle: var(--color-toggle-light);
+	view-transition-name: root;
+	--color-surface: var(--color-surface-light);
+	--color-text: var(--color-text-light);
+	--color-accent: var(--color-accent-light);
+	--color-success: var(--color-success-light);
+	--color-error: var(--color-error-light);
+	--color-warning: var(--color-warning-light);
+	--color-toggle: var(--color-toggle-light);
 
-  --text-toggle: "🌙"
+	--text-toggle: '🌙';
 }
 
 @view-transition {
-  navigation: auto;
+	navigation: auto;
 }
 
 @keyframes move-out {
-  from {
-    transform: translateY(0%);
-  }
+	from {
+		transform: translateY(0%);
+	}
 
-  to {
-    transform: translateY(-100%);
-  }
+	to {
+		transform: translateY(-100%);
+	}
 }
 
 @keyframes move-in {
-  from {
-    transform: translateY(100%);
-  }
+	from {
+		transform: translateY(100%);
+	}
 
-  to {
-    transform: translateY(0%);
-  }
+	to {
+		transform: translateY(0%);
+	}
 }
 
 /* Apply the custom animation to the old and new page states */
 
 ::view-transition-old(root) {
-  animation: 0.2s ease-in both move-out;
+	animation: 0.2s ease-in both move-out;
 }
 
 ::view-transition-new(root) {
-  animation: 0.2s ease-in both move-in;
+	animation: 0.2s ease-in both move-in;
 }
 
 [data-theme='dark'] {
-  --color-surface: var(--color-surface-dark);
-  --color-text: var(--color-text-dark);
-  --color-accent: var(--color-accent-dark);
-  --color-success: var(--color-success-dark);
-  --color-error: var(--color-error-dark);
-  --color-warning: var(--color-warning-dark);
-  --color-toggle: var(--color-toggle-dark);
+	--color-surface: var(--color-surface-dark);
+	--color-text: var(--color-text-dark);
+	--color-accent: var(--color-accent-dark);
+	--color-success: var(--color-success-dark);
+	--color-error: var(--color-error-dark);
+	--color-warning: var(--color-warning-dark);
+	--color-toggle: var(--color-toggle-dark);
 
-  --text-toggle: "☀️"
+	--text-toggle: '☀️';
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 body {
-  background: var(--color-surface);
-  color: var(--color-text);
+	background: var(--color-surface);
+	color: var(--color-text);
 }
 
 a {
-  color: var(--color-accent);
-  text-decoration: none;
-  font-weight: bold;
+	color: var(--color-accent);
+	text-decoration: none;
+	font-weight: bold;
 
-  &:hover {
-    text-decoration: underline;
-  }
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+	list-style: none;
+	padding: 0;
 }

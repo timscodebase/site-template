@@ -13,7 +13,7 @@
 		const root = document.documentElement || document.body
 
 		for (const color in colors) {
-			root.style.setProperty(`--${color}`, colors[color])
+			root.style.setProperty(`--${color}`, colors[color as keyof typeof colors])
 		}
 	})
 </script>

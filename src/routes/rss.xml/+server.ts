@@ -11,7 +11,7 @@ export async function GET({ fetch }) {
 	const xml = `
 		<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 			<channel>
-				<title>${config.title}</title>
+				<title>${config.name}</title>
 				<description>${config.description}</description>
 				<link>${config.url}</link>
 				<atom:link href="${config.url}/rss.xml" rel="self" type="application/rss+xml"/>
