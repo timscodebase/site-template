@@ -5,3 +5,9 @@
 <footer>
 	<p>&copy; {new Date().getFullYear()} {name}</p>
 </footer>
+
+<style>
+	footer {
+		text-align: center;
+	}
+</style>
