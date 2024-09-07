@@ -26,4 +26,10 @@
 		max-width: 1000px;
 		margin-inline: auto;
 	}
+
+	@media (max-width: 650px) {
+		.wrapper {
+			padding-inline: 1rem;
+		}
+	}
 </style>

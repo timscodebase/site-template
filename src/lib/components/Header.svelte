@@ -39,6 +39,16 @@
 		}
 	}
 
+	@media (max-width: 650px) {
+		.logo {
+			align-items: center;
+
+			p {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+
 	.logo-span {
 		font-size: 2.5rem;
 	}

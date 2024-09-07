@@ -67,6 +67,19 @@
 		width: 40px;
 	}
 
+	@media (max-width: 650px) {
+		.theme-switch {
+			height: 12px;
+			width: 20px;
+		}
+
+		.theme-switch-wrapper {
+			em {
+				font-size: 1rem;
+			}
+		}
+	}
+
 	.theme-switch input {
 		display: none;
 	}
@@ -98,12 +111,25 @@
 		background-color: var(--color-accent);
 	}
 
+	@media (max-width: 650px) {
+		.slider:before {
+			--offset: 1px;
+			--size: 10px;
+		}
+	}
+
 	input:checked + .slider {
 		background-color: var(--color-toggle);
 	}
 
 	input:checked + .slider:before {
 		transform: translateX(16px);
+	}
+
+	@media (max-width: 650px) {
+		input:checked + .slider:before {
+			transform: translateX(8px);
+		}
 	}
 
 	.slider.round {

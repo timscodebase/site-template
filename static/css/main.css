@@ -1,20 +1,5 @@
 @import url('./typograpy.css');
 
-body {
-  background: var(--color-surface);
-  color: var(--color-text);
-}
-
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-  font-weight: bold;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 :root {
   view-transition-name: root;
   --color-surface: var(--color-surface-light);
@@ -77,4 +62,24 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
