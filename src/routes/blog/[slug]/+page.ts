@@ -1,7 +1,8 @@
+import type { PageServerLoad } from './$types'
 import { error } from '@sveltejs/kit'
 
-export async function load({ params }) {
-	try {
+export const load = (async ({ params }: { params: { slug: string } }) => {
+  try {
 		const post = await import(`../../../posts/${params.slug}.md`)
 
 		return {
@@ -11,4 +12,4 @@ export async function load({ params }) {
 	} catch (e) {
 		error(404, `Could not find ${params.slug}`)
 	}
-}
+}) satisfies PageServerLoad;

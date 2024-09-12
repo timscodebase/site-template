@@ -8,7 +8,6 @@
 	img {
 		height: auto;
 		max-width: 100%;
-		aspect-ratio: 16 / 9;
-		background-size: contain;
+		object-fit: contain;
 	}
 </style>

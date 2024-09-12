@@ -1,5 +1,5 @@
 <script>
-	import { Image } from '$lib/'
+	import { Image, Side_By_Side } from '$lib'
 	import * as config from '$lib/config'
 </script>
 
@@ -33,6 +33,18 @@
 	</p>
 </section>
 
+<Side_By_Side>
+	<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro voluptate pariatur
+		corporis id aliquam aliquid recusandae at saepe dolores. Molestias eaque corporis explicabo
+		perferendis deserunt impedit sint, eligendi, aut magni dignissimos consequatur eius? Impedit!
+	</p>
+	<Image
+		src="https://res.cloudinary.com/tithos/image/upload/q_auto:eco/v1704755542/tim-v7/IMG_1343.avif"
+		alt="Red, Pink, and White Flowers"
+	/>
+</Side_By_Side>
+
 <section>
 	<Image
 		src="https://res.cloudinary.com/tithos/image/upload/q_auto:eco/v1726111944/8_y8vag4.avif"
@@ -58,6 +70,3 @@
 		sint recusandae unde rerum error tempore voluptate architecto?
 	</p>
 </section>
-
-<style>
-</style>

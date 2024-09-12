@@ -46,4 +46,10 @@
 			padding-inline: 1rem;
 		}
 	}
+
+	:global(:where(p)) {
+		padding: 0.5rem 0;
+		line-height: 1.75;
+		max-inline-size: 100%;
+	}
 </style>
