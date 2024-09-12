@@ -10,6 +10,7 @@
 	<title>{config.name} | Blog</title>
 </svelte:head>
 
+<h1>Blog</h1>
 <!-- Posts -->
 <section>
 	<ul class="posts">
