@@ -1,6 +1,5 @@
 import type { PageLoad } from './$types';
 import { fail } from '@sveltejs/kit';
-export const prerender = false
 
 export const load = (async () => {
     return {};

@@ -31,7 +31,16 @@ const config = {
 	extensions: ['.svelte', '.md', '.svx'],
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		prerender: {
+      handleHttpError: ({ status, path, referrer, referenceType }) => {
+        // Handle the error based on status code or other parameters
+        if (status === 500) {
+          console.error(`Error 500 encountered at ${path}`);
+          return { status: 200, body: 'Custom error message or handling logic' };
+        }
+      }
+    }
 	}
 }
 
