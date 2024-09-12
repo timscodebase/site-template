@@ -2,6 +2,9 @@
 	import { Footer, Header } from '$lib'
 	import { colors } from '$lib/config'
 
+	import 'open-props/style'
+	import 'open-props/normalize'
+
 	let { children } = $props()
 
 	// set root variables

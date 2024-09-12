@@ -36,7 +36,7 @@
 			--border: var(--color-surface);
 
 			padding: 0.5rem;
-			border-radius: 1rem;
+			border-radius: var(--radius-3);
 			border: 2px solid var(--border);
 		}
 
