@@ -10,7 +10,7 @@ import rehypeSlug from 'rehype-slug'
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-	extensions: ['.md'],
+	extensions: ['.md', '.svx'],
 	remarkPlugins: [remarkUnwrapImages, [remarkToc, { tight: true }]],
 	rehypePlugins: [rehypeSlug],
 	highlight: {
@@ -28,7 +28,7 @@ const mdsvexOptions = {
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', '.md'],
+	extensions: ['.svelte', '.md', '.svx'],
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 	kit: {
 		adapter: adapter()

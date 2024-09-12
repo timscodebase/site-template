@@ -15,9 +15,11 @@
 	<ul class="posts">
 		{#each posts as post}
 			<li class="post" style={`--transition-name: post-${post.slug}`}>
-				<a href={`blog/${post.slug}`} class="title">{post.title}</a>
-				<p class="date">{formatDate(post.date)}</p>
-				<p class="description">{post.description}</p>
+				<a href={`blog/${post.slug}`} class="title">
+					<h2>{post.title}</h2>
+					<p class="date">{formatDate(post.date)}</p>
+					<p class="description">{post.description}</p>
+				</a>
 			</li>
 		{/each}
 	</ul>
@@ -26,11 +28,26 @@
 <style>
 	.posts {
 		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 2rem;
-	}
-
-	.post {
 		max-inline-size: var(--size-content-3);
+
+		li {
+			--border: var(--color-surface);
+
+			padding: 0.5rem;
+			border-radius: 1rem;
+			border: 2px solid var(--border);
+		}
+
+		li:hover {
+			--border: var(--color-accent);
+		}
+
+		a {
+			/* padding: 0.5rem; */
+			text-decoration: none;
+		}
 	}
 
 	.post:not(:last-child) {

@@ -14,8 +14,54 @@
 }
 
 @view-transition {
-	navigation: auto;
+  navigation: auto;
+  types: slide, forwards;
 }
+
+/* Determine what gets captured when the type is forwards or backwards */
+html:active-view-transition-type(forwards, backwards) {
+  :root {
+    view-transition-name: none;
+  }
+  article {
+    view-transition-name: content;
+  }
+  .pagination {
+    view-transition-name: pagination;
+  }
+}
+
+/* Animation styles for forwards type only */
+html:active-view-transition-type(forwards) {
+  &::view-transition-old(content) {
+    animation-name: slide-out-to-left;
+  }
+  &::view-transition-new(content) {
+    animation-name: slide-in-from-right;
+  }
+}
+
+/* Animation styles for backwards type only */
+html:active-view-transition-type(backwards) {
+  &::view-transition-old(content) {
+    animation-name: slide-out-to-right;
+  }
+  &::view-transition-new(content) {
+    animation-name: slide-in-from-left;
+  }
+}
+
+/* Animation styles for reload type only */
+html:active-view-transition-type(reload) {
+  &::view-transition-old(root) {
+    animation-name: fade-out, scale-down;
+  }
+  &::view-transition-new(root) {
+    animation-delay: 0.25s;
+    animation-name: fade-in, scale-up;
+  }
+}
+
 
 @keyframes move-out {
 	from {
@@ -57,11 +103,6 @@
 	--color-toggle: var(--color-toggle-dark);
 
 	--text-toggle: '☀️';
-}
-
-img {
-	max-width: 100%;
-	height: auto;
 }
 
 body {

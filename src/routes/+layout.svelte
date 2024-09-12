@@ -15,6 +15,16 @@
 		for (const color in colors) {
 			root.style.setProperty(`--${color}`, colors[color as keyof typeof colors])
 		}
+
+		window.addEventListener('pagereveal', async (e) => {
+			if (e.viewTransition) {
+				const transitionType = determineTransitionType(
+					navigation.activation.from,
+					navigation.activation.entry
+				)
+				e.viewTransition.types.add(transitionType)
+			}
+		})
 	})
 </script>
 
