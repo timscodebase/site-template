@@ -6,7 +6,9 @@
 
 <style>
 	img {
-		max-width: 100%;
 		height: auto;
+		max-width: 100%;
+		aspect-ratio: 16 / 9;
+		background-size: contain;
 	}
 </style>
