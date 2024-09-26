@@ -34,15 +34,37 @@
 </section>
 
 <Side_By_Side>
-	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro voluptate pariatur
-		corporis id aliquam aliquid recusandae at saepe dolores. Molestias eaque corporis explicabo
-		perferendis deserunt impedit sint, eligendi, aut magni dignissimos consequatur eius? Impedit!
-	</p>
-	<Image
-		src="https://res.cloudinary.com/tithos/image/upload/q_auto:eco/v1704755542/tim-v7/IMG_1343.avif"
-		alt="Red, Pink, and White Flowers"
-	/>
+	<svelte:fragment slot="left">
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro voluptate pariatur
+			corporis id aliquam aliquid recusandae at saepe dolores. Molestias eaque corporis explicabo
+			perferendis deserunt impedit sint, eligendi, aut magni dignissimos consequatur eius? Impedit!
+		</p>
+	</svelte:fragment>
+
+	<svelte:fragment slot="right">
+		<Image
+			src="https://res.cloudinary.com/tithos/image/upload/q_auto:eco/v1704755542/tim-v7/IMG_1343.avif"
+			alt="Red, Pink, and White Flowers"
+		/>
+	</svelte:fragment>
+</Side_By_Side>
+
+<Side_By_Side>
+	<svelte:fragment slot="right">
+		<Image
+			src="https://res.cloudinary.com/tithos/image/upload/q_auto:eco/v1704755542/tim-v7/IMG_1343.avif"
+			alt="Red, Pink, and White Flowers"
+		/>
+	</svelte:fragment>
+
+	<svelte:fragment slot="left">
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro voluptate pariatur
+			corporis id aliquam aliquid recusandae at saepe dolores. Molestias eaque corporis explicabo
+			perferendis deserunt impedit sint, eligendi, aut magni dignissimos consequatur eius? Impedit!
+		</p>
+	</svelte:fragment>
 </Side_By_Side>
 
 <section>

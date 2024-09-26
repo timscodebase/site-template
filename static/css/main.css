@@ -124,3 +124,17 @@ ul {
 	list-style: none;
 	padding: 0;
 }
+
+.side-by-side:has(img) {
+	img {
+		border: none;
+	}
+}
+
+.side-by-side > img:first-child {
+    border-radius: var(--radius-3) 0 0 var(--radius-3);
+}
+
+.side-by-side > img:last-child {
+    border-radius: 0 var(--radius-3) var(--radius-3) 0;
+}
